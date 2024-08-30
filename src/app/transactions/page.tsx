@@ -3,7 +3,7 @@
 import { TransactionCard } from "./_components/TransactionCard";
 import { CreateTransaction } from "./_components/CreateTransaction";
 import React from "react";
-import { LinksBar } from "../home/_components/LinksBar";
+import { LinksBar } from "../../components/shared/LinksBar";
 import { Header } from "@/components/shared/Header";
 import { useGetUserTransactions } from "@/hooks/transaction/get-user-transactions";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -46,7 +46,7 @@ export default function Page() {
             <Label htmlFor="sent">Sent</Label>
           </div>
         </div>
-        {filteredTransactions || typeChecked !== null
+        {filteredTransactions && typeChecked !== null
           ? filteredTransactions?.map((t) => (
               <TransactionCard key={t.id} transaction={t} />
             ))

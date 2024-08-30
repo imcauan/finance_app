@@ -24,7 +24,7 @@ const formSchema = z.object({
 
 export function CreateTransaction() {
   const { user } = useAuthContext();
-  const { mutateAsync: CreateTransactionFn } = useCreateTransaction();
+  const { mutate: CreateTransactionFn } = useCreateTransaction();
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -34,9 +34,8 @@ export function CreateTransaction() {
   });
 
   const onSubmit = async (data: z.infer<typeof formSchema>) => {
-    await CreateTransactionFn({
+    CreateTransactionFn({
       from: user?.id ?? "",
-      type: 1,
       ...data,
     });
   };
