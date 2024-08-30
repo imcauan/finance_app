@@ -10,14 +10,6 @@ import {
 } from "@/components/ui/context-menu";
 import { ContextMenuContent } from "@radix-ui/react-context-menu";
 import { Separator } from "@/components/ui/separator";
-import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogHeader,
-  AlertDialogTrigger,
-} from "@/components/ui/alert-dialog";
 
 interface CardCarouselProps {
   cards: CardEntity[];

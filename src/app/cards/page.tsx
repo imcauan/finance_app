@@ -1,14 +1,10 @@
 "use client";
 
-import { BottomBar } from "@/components/shared/Bottombar/Bottombar";
-import { useAuthContext } from "@/hooks/useAuthContext";
-import { Card } from "./card/Card";
-import { CreateCardForm } from "./card/CreateCardForm";
-import { LinksBar } from "../home/_components/LinksBar";
+import { CreateCardForm } from "./_components/card/CreateCardForm";
+import { LinksBar } from "../../components/shared/LinksBar";
 import { Header } from "@/components/shared/Header";
-import { UserCards } from "./card/UserCards";
+import { UserCards } from "./_components/card/UserCards";
 import { useGetUserCards } from "@/hooks/card/get-user-cards";
-import { Checkbox } from "@/components/ui/checkbox";
 
 export default function Page() {
   const { data: cards } = useGetUserCards();

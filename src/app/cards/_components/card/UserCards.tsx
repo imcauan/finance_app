@@ -1,5 +1,3 @@
-import { UserEntity } from "@/entities/UserEntity";
-import { Card } from "./Card";
 import { CardCarousel } from "./CardCarousel";
 import { CardEntity } from "@/entities/CardEntity";
 
